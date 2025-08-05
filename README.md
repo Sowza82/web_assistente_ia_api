@@ -32,4 +32,4 @@ Feita com **HTML, CSS e JavaScript puro**, sem frameworks — só no talento e n
 1. Clone este repositório:
 
 ```bash
-git clone https://github.com/CodeNovaTeam/web-assistente-ia-api.git
+git clone https://web-assistente-ia-api.
