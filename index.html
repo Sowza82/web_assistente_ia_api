@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web assistente CodeNova</title>
+  <title>Assistente web IA | CodeNova</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <main class="container">
+    <h1> Assistente IA - CodeNova</h1>
 
+    <!-- Campo da API Key -->
+    <label for="apiKey"> Sua API Key:</label>
+    <input type="password" id="apiKey" placeholder="Cole sua chave aqui..." />
+
+    <!-- Campo da pergunta -->
+    <label for="pergunta"> Sua Pergunta:</label>
+    <textarea id="pergunta" rows="4" placeholder="Digite aqui sua pergunta para a IA..."></textarea>
+
+    <!-- Botões de ação -->
+    <div class="botoes">
+      <button id="btnPerguntar">Perguntar</button>
+      <button id="btnLimpar">Limpar</button>
+      <button id="btnCopiar">Copiar Resposta</button>
+    </div>
+
+    <!-- Área da resposta -->
+    <section id="respostaContainer">
+      <h2> Resposta da IA:</h2>
+      <div id="resposta"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
