@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assistente web IA | CodeNova</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assistente de IA Web</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <main class="container">
-    <h1> Assistente IA - CodeNova</h1>
+  <header>
+    <h1>Assistente de IA Web</h1>
+  </header>
 
-    <!-- Campo da API Key -->
-    <label for="apiKey"> Sua API Key:</label>
-    <input type="password" id="apiKey" placeholder="Cole sua chave aqui..." />
+  <main>
+    <section id="area-configuracoes">
+      <label for="campo-chave">Sua chave da API:</label>
+      <input type="password" id="campo-chave" placeholder="Cole aqui sua chave de API" />
 
-    <!-- Campo da pergunta -->
-    <label for="pergunta"> Sua Pergunta:</label>
-    <textarea id="pergunta" rows="4" placeholder="Digite aqui sua pergunta para a IA..."></textarea>
+      <label for="seletor-modelo">Escolha o modelo:</label>
+      <select id="seletor-modelo">
+        <option value="gpt">GPT (OpenAI)</option>
+        <option value="gemini">Gemini (Google)</option>
+      </select>
+    </section>
 
-    <!-- Botões de ação -->
-    <div class="botoes">
-      <button id="btnPerguntar">Perguntar</button>
-      <button id="btnLimpar">Limpar</button>
-      <button id="btnCopiar">Copiar Resposta</button>
-    </div>
+    <section id="area-perguntas">
+      <textarea id="campo-pergunta" placeholder="Digite sua pergunta..."></textarea>
+      <button id="botao-enviar">Perguntar</button>
+    </section>
 
-    <!-- Área da resposta -->
-    <section id="respostaContainer">
-      <h2> Resposta da IA:</h2>
-      <div id="resposta"></div>
+    <section id="area-resposta">
+      <h2>Resposta:</h2>
+      <div id="texto-resposta"></div>
     </section>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Desenvolvido pelo grupo <strong>CodeNova</strong></p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
