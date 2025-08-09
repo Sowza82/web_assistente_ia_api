@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web assistente CodeNova</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente de IA</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <header>
+        <h1>Assistente de IA</h1>
+    </header>
+    
+    <main>
+        <div class="api-key-container">
+            <label for="api-key">Chave da API:</label>
+            <input type="password" id="api-key" placeholder="Insira sua chave de API">
+            <button id="save-key">Salvar</button>
+        </div>
+        
+        <div class="chat-container">
+            <textarea id="question" placeholder="Digite sua pergunta..."></textarea>
+            <button id="ask-button">Perguntar</button>
+        </div>
+        
+        <div class="response-container hidden">
+            <h2>Resposta:</h2>
+            <div id="response"></div>
+            <button id="copy-button">Copiar</button>
+            <button id="clear-button">Limpar</button>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
 </body>
 </html>

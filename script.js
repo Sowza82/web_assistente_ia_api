@@ -132,5 +132,5 @@ document.addEventListener('DOMContentLoaded', () => {
         return await fetchGemini('SUA_CHAVE_GEMINI', question);
     }
 }
-
 });
+
