@@ -108,6 +108,26 @@ textarea {
   background: var(--cor-secundaria);
 }
 
+/* Botão Limpar */
+#botao-limpar {
+  max-width: 200px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background: var(--cor-borda);
+  color: var(--cor-texto);
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  display: none; /* começa oculto, vai aparecer via JS */
+}
+
+#botao-limpar:hover {
+  background: var(--cor-secundaria);
+}
+
 /* Área da resposta */
 #area-resposta h2 {
   margin-bottom: 10px;
