@@ -4,9 +4,8 @@
   "description": "Aplicação web desenvolvida pela **Equipe CodeNova**, que utiliza uma **API de Inteligência Artificial (IA)** para responder perguntas em tempo real.  \r Feita com **HTML, CSS e JavaScript puro**, sem frameworks — só no talento e na lógica! 😎",
   "main": "script.js",
   "scripts": {
-  "start": "live-server --port=3000"
-}
-,
+    "start": "live-server --port=3000"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sowza82/web_assistente_ia_api.git"
@@ -20,6 +19,6 @@
   },
   "homepage": "https://github.com/Sowza82/web_assistente_ia_api#readme",
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.0"
   }
 }
