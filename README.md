@@ -1,151 +1,103 @@
-# Assistente de IA Web
-
-**Equipe CodeNova**
-
----
+# Projeto - Assistente de IA Web (Parte 2)
 
 ## Descrição
 
-Aplicação web que conecta perguntas feitas pelo usuário a APIs de Inteligência Artificial (IA) para fornecer respostas em tempo real. Desenvolvida com HTML, CSS e JavaScript puro, sem frameworks — só código limpo e funcional.
+Nesta segunda parte do projeto, evoluímos nossa aplicação de IA, trazendo melhorias na experiência do usuário e adicionando novas funcionalidades.
+O foco desta etapa é ampliar as interações possíveis e otimizar a interface, garantindo mais praticidade e organização no código.
 
-Suporta atualmente os seguintes modelos:
-
-- **GPT (OpenAI)** — integração oficial e estável.
-- **Gemini (Google)** — integração experimental (API fictícia para testes).
+> 📄 Histórico completo de alterações disponível no arquivo [CHANGELOG.md](./CHANGELOG.md).
 
 ---
 
-## Tecnologias
+## Funcionalidades Adicionadas
 
-- HTML5  
-- CSS3 (tema escuro roxo, moderno e acessível)  
-- JavaScript ES6+  
-- [live-server](https://www.npmjs.com/package/live-server) (como devDependency para desenvolvimento local)
+### 1. Botão Limpar Resposta
+
+- Remove a resposta atual da tela.
+- Esconde a seção de resposta.
+- Limpa também o campo de pergunta.
+- Confirmação antes de limpar (opcional).
+
+### 2. Botão Copiar Resposta
+
+- Copia o texto gerado pela IA.
+- Usa a API `navigator.clipboard`.
+- Feedback visual de cópia bem-sucedida.
+- Tratamento de erro para clipboard indisponível.
+
+### 3. Melhorias na Interface
+
+- Exibição da pergunta junto com a resposta.
+- Botões organizados de forma intuitiva.
+- Ícones para melhor experiência do usuário.
+- Animações de entrada para elementos.
+
+### 4. Responsividade Aprimorada
+
+- Layout otimizado para dispositivos móveis.
+- Botões e elementos adaptados para toque.
+- Textos ajustados para telas pequenas.
+
+### 5. Funcionalidades Extras
+
+- Contador de caracteres no campo de texto.
+- Salvar API Key no `localStorage` (opcional).
 
 ---
 
-## Pré-requisitos
+## Organização de Branches
 
-- Node.js e npm instalados (https://nodejs.org/)  
-- Chave de API válida da OpenAI (começa com `sk-`)  
-- Chave da API Google Gemini (atualmente experimental/fictícia)
-
----
-
-## Dependências
-
-- **live-server** (devDependency): servidor local para desenvolvimento que recarrega a página automaticamente ao salvar.  
-Instalado com:
-
-```bash
-npm install --save-dev live-server
-
----
-O comando para rodar o servidor está definido em package.json como:
-
-npm start
-
+- Removemos branches antigas utilizadas apenas na Parte 1:
+  - `tatiane-souza`
+  - `lauane-lima2`
+  - `mariana-macedo`
+- A estrutura atual mantém apenas as branches essenciais para a Parte 2.
 
 ---
 
-Como clonar e rodar o projeto
+## Próximos Passos (Ideias para Extensão)
 
-1. Clone o repositório:
+- Histórico de conversas.
+- Tema escuro/claro.
+- Suporte a múltiplos provedores (Anthropic, Google, etc.).
+- Markdown rendering.
+- Exportar conversas em PDF/arquivo.
+- Atalhos de teclado.
+- Testes em múltiplos dispositivos.
+- Explorar novas APIs do navegador.
 
+---
 
+## Como Executar
 
-git clone https://github.com/Sowza82/web_assistente_ia_api.git
+1. Clone este repositório:
 
-2. Entre na pasta:
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
 
+---
+2.Acesse a pasta do projeto:
 
+cd nome-do-projeto
 
-cd web_assistente_ia_api
+---
 
-3. Instale as dependências:
-
-
+3.Instale as dependências:
 
 npm install
 
-4. Inicie o servidor local:
-
-
+---
+4.Execute localmente:
 
 npm start
 
-5. Abra no navegador o endereço:
-
-
-
-http://localhost:3000
-
-
 ---
+## Tecnologias Utilizadas:
 
-Como usar a aplicação
+HTML5
 
-1. No campo Sua chave da API, cole sua chave válida da OpenAI (exemplo: sk-abcdef123456...).
+CSS3
 
-A chave deve começar com "sk-" para ser aceita.
+JavaScript (ES6+)
 
-A chave é salva no localStorage para uso futuro.
-
-
-
-2. Escolha o modelo:
-
-GPT (OpenAI) — recomendado e estável.
-
-Gemini (Google) — experimental e em desenvolvimento.
-
-
-
-3. Digite sua pergunta no campo apropriado.
-
-
-4. Clique no botão Perguntar.
-
-
-5. Aguarde o spinner e visualize a resposta da IA na área de resposta.
-
-
-
-
----
-
-Estrutura do projeto
-
-/ (raiz)
-├── index.html          # Estrutura da aplicação
-├── style.css           # Estilos em CSS
-├── script.js           # Lógica JavaScript para API e UI
-├── package.json        # Configuração do projeto e dependências
-└── README.md           # Este arquivo
-
-
----
-
-Próximos passos e melhorias
-
-Integração oficial da API Gemini quando liberada.
-
-Melhorias na validação da chave e feedback para o usuário.
-
-Suporte a mais APIs e modelos.
-
-Implementação de testes automatizados.
-
-
-
----
-
-Segurança
-
-Não exponha sua chave de API publicamente.
-
-Para produção, utilize variáveis de ambiente ou back-end para proteger a chave.
-
-
-
----
+APIs do navegador
