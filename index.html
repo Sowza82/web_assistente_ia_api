@@ -4,39 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Assistente de IA Web</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
-    <h1>Assistente de IA Web</h1>
+    <h1>Assistente de IA Web <i class="fas fa-robot"></i></h1>
+    <button id="toggle-theme" class="theme-toggle" title="Alternar Tema">🌙</button>
   </header>
 
   <main>
-    <section id="area-configuracoes">
-      <label for="campo-chave">Sua chave da API:</label>
-      <input type="password" id="campo-chave" placeholder="Cole aqui sua chave de API" />
+    <!-- Configurações -->
 
-      <label for="seletor-modelo">Escolha o modelo:</label>
+    <section id="area-configuracoes">
+      <label for="campo-chave"><i class="fas fa-key"></i> Sua chave da API:</label>
+      <input type="password" id="campo-chave" placeholder="Cole aqui sua chave de API" />
+      <div class="api-buttons">
+        <button id="botao-salvar" title="Salvar chave" style="display:none;"><i class="fas fa-save"></i> Salvar</button>
+        <button id="botao-limpar-chave" title="Limpar chave" style="display:none;"><i class="fas fa-eraser"></i> Limpar</button>
+      </div>
+
+      <label for="seletor-modelo"><i class="fas fa-robot"></i> Escolha o modelo:</label>
       <select id="seletor-modelo">
         <option value="gpt">GPT (OpenAI)</option>
         <option value="gemini">Gemini (Google)</option>
       </select>
     </section>
 
+    <!-- Perguntas -->
+
     <section id="area-perguntas">
-      <textarea id="campo-pergunta" placeholder="Digite sua pergunta..."></textarea>
-      <button id="botao-enviar">Perguntar</button>
+      <div class="campo-pergunta-container">
+        <textarea id="campo-pergunta" placeholder="Digite sua pergunta..." maxlength="1000"></textarea>
+        <div id="contador-caracteres">0 / 1000</div>
+      </div>
+      <div class="botoes-pergunta">
+        <button id="botao-enviar"><i class="fas fa-paper-plane"></i> Perguntar</button>
+        <button id="botao-limpar" style="display:none;"><i class="fas fa-eraser"></i> Limpar</button>
+      </div>
     </section>
 
+    <!-- Resposta -->
+
     <section id="area-resposta" style="display:none;">
-      <h2>Resposta:</h2>
-      <div id="spinner" class="spinner" style="display:none;"></div>
+      <h2>Resposta <i class="fas fa-comment-dots"></i></h2>
+      <p id="pergunta-anterior" class="pergunta-anterior"></p>
+
+      <div id="spinner" class="spinner" style="display:none;">
+        <i class="fas fa-spinner fa-spin"></i> Carregando...
+      </div>
       <div id="texto-resposta"></div>
+
+      <div class="botoes-resposta">
+        <button id="botao-copiar" title="Copiar Resposta"><i class="fas fa-copy"></i> Copiar</button>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Desenvolvido pelo grupo <strong>CodeNova</strong></p>
+    <p>&copy; 2025 Desenvolvido pelo grupo <strong>CodeNova</strong> <i class="fas fa-heart"></i></p>
   </footer>
 
   <script src="script.js"></script>
